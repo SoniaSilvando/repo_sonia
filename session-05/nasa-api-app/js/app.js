@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const fetchApodButton = document.getElementById("fetch-apod");
   const apodContent = document.getElementById("apod-content");
-  const apiKey = "YOUR_API_KEY";
+  const apiKey = "p14UAKlI4ZgY4AkZbhekF8pp1Hgdoh8qav36I4AS";
 
   fetchApodButton.addEventListener("click", () => {
     const date = document.getElementById("date").value;
@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const endDate = document.getElementById("end_date").value;
     const count = document.getElementById("count").value;
     const thumbs = document.getElementById("thumbs").checked;
+console.log("El botón fue presionado, los inputs se leyeron correctamente");
 
     let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
