@@ -1,38 +1,23 @@
-const { MyListComponent } = require("./scripts_challenge_3");
-
 // Challenge - Stage 1
 let addBook = function (book) {
-// If there's no book to do, do nothing
-// data
+  // If there's no book to do, do nothing
+  // data
   if (!book || book.length < 1) return;
 
-// Get the list
-  let list = document.querySelector('#list');
+  // Get the list
+  // Create a new list item
+  let list = document.querySelector("#list");
 
-// Create a new list item
-// template
-let listItem = document.createElement('li');
+  // template
+  let listItem = document.createElement("li");
+  // Append the item to the list
   listItem.textContent = book;
-// Append the item to the list
-// render
+  // render
   list.appendChild(listItem);
 };
 
 let book = "Harry Potter IV";
+let book1 = "Harry Potter III";
 
-addBook(book);// Creating instances using the Book constructor
-// The list of books
-let app = new MyListComponent('#app', {
-    data: {
-        books: ['Harry Potter I', 'Harry Potter II’,', Harry, Potter, III, "]"]
-    },
-    template: function (props) {
-        let html = '<ul>' +
-            props.books.map(function (book) {
-                return '<li>' + book + '</li>';
-            }).join('') +
-            '</ul>';
-        return html;
-    }
-});
-
+addBook(book);
+addBook(book1);
